@@ -146,7 +146,7 @@ module PokerScorer =
         | _ -> highCardResult hand
 
     
-    ///<Summary>Reduce an internal score like 11 332 359 for AKQJ9 to output score 0 for high card Ace</Summary>
+    ///<Summary>Reduce an internal score like 755 499 for AKQJ9 to output score 0 for high card Ace</Summary>
     let getSimpleScore points =         
         points / scoringStep
 

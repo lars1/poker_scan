@@ -2,7 +2,7 @@
 
 ///<summary>
 ///Precomputes the string descriptions for the most common hands, 
-///which is completely necessary for scoring hands quickly.
+///which is necessary for scoring hands quickly.
 ///</summary>
 module HandTexts = 
     

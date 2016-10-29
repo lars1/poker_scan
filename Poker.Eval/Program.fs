@@ -99,11 +99,6 @@ module Driver =
 
 [<EntryPoint>]
 let main argv = 
-    // Moral: string creation (sprintf) can be slow especially when you do ten thousands of them.
-    // Having precomputed strings in some maps sped things up a lot, from over 23s to 1.8s on one thread!
-    // Other than that I did not really see much perf penalty from doing things properly, instead of 
-    // say making the most bare bones hacky implementation (although some savings would probably be made)
-
     let outputPath = sprintf "1000results-%s.txt" Driver.digestibleSortableDateTime
     let numTasks = 8          // the number of concurrent threads to use 
 
