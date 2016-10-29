@@ -90,7 +90,7 @@ type PokerException =
     new (message) = { inherit System.Exception(message) }
     new (message: string, innerException) = { inherit System.Exception(message, innerException) }
     new (si: System.Runtime.Serialization.SerializationInfo, sc) = { inherit System.Exception(si, sc) }
-
+        
 
 type PokerHand(cards: list<Card>, sorted: bool) =
     // Getter-only auto property:
@@ -113,4 +113,3 @@ type PokerHand(cards: list<Card>, sorted: bool) =
     static member private SortCards cards =
         cards
         |> List.sortByDescending (fun card -> Main.cardToOrd card)
-

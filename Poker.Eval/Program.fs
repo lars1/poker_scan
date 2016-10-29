@@ -43,7 +43,7 @@ module Driver =
     let private winnersToString (winners: List<PlayerScore>) =
         match winners with
         | [] -> "none"
-        | _ when List.length winners = 1 -> sprintf "Player %d" (List.head winners).PlayerNumber
+        | _ when List.length winners = 1 -> sprintf "Player %d" ((List.head winners).PlayerNumber + 1)
         | _ -> sprintf "Players %s" 
                 (System.String.Join("+", 
                                     winners |> List.map (fun p -> string(p.PlayerNumber + 1))))
@@ -54,7 +54,11 @@ module Driver =
         | [] -> sprintf "%d,0,," roundResult.RoundNumber
         | w -> 
             let w1 = List.head w
-            sprintf "%d,%d,%s,%s" roundResult.RoundNumber (w1.Score.Points / 100) (winnersToString w) w1.Score.Desc
+            sprintf "%d,%d,%s,%s" 
+                roundResult.RoundNumber 
+                (w1.Score.Points |> PokerScorer.getSimpleScore) 
+                (winnersToString w) 
+                w1.Score.Desc
 
     ///<summary>Write the whole result out</summary>
     let private outputResults outputFilePath elapsedTime numTasks lines =
