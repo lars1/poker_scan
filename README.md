@@ -1,7 +1,7 @@
 # Poker scan
 This is a solution to a programming challenge that was posted on cplus.about.com way back in 2008. There are quite a lot of puzzles there, but unfortunately the poker challenge disappeared a while ago. 
 
-I don't play Poker much, but it seemed like a fun little programming challenge to do, and I also used it as a opportunity to learn more F#. The code is written with a functional mindset, with possibly a few minor patches of imperative code. I started out as a beginner in F#, and now I feel like I'm a little bit more skilled beginner :)
+I don't play Poker much, but it seemed like a fun little programming challenge to do, and I also used it as a opportunity to learn more F#. The code is written with a functional mindset, with possibly a few minor patches of imperative code. I started out as a beginner in F#, and, well, I'm still a beginner :)
 
 ## Credits
 
